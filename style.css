@@ -1,0 +1,436 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos para los botones */
+.btn, .btn2 {
+    margin-left: 20px;
+    font-weight: 700;
+    color: #4a5b63;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    align-self: center; /* Alinear el botón al centro verticalmente */
+}
+
+.btn:hover, .btn2:hover {
+    background-color: #e2f1f8;
+    transform: scale(1.1);
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 3%;
+}
+
+.text-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-container img {
+    height: 600px;
+    width: 700px;
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    object-fit: cover;
+}
+
+/* Estilos para las tarjetas de productos */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+}
+
+/* Tarjetas */
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    overflow: hidden;
+}
+
+.card .card_landing {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 10px #000;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.card .card_landing img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .card_landing h6 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 25px;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card .card_info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover .card_info {
+    opacity: 1;
+}
+
+.card_info .head {
+    padding: 5px 0;
+    border-bottom: solid 1px #bc8811;
+}
+
+.card_info .head .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #bc8811;
+}
+
+.card_info .head .description {
+    display: flex;
+    gap: 10px;
+}
+
+.card_info .head .description .item {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.card_info .head .description .item i {
+    color: #bc8811;
+    font-size: 15px;
+}
+
+.card_info .head .description .item p {
+    font-size: 13px;
+}
+
+.card_info .content {
+    margin-top: 15px;
+}
+
+.card_info .content .list {
+    padding: 10px 15px;
+}
+
+.card_info .content .list li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.card_info .action .btn {
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    background: #758a94;
+    display: block;
+    margin-top: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* Estilos para el header */
+.header {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+}
+
+.logo img {
+    height: 130px;
+    transition: all 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links ul {
+    list-style: none; /* Eliminar los puntos de la lista */
+    padding: 0; /* Eliminar el padding por defecto */
+    margin: 0; /* Eliminar el margen por defecto */
+    display: flex; /* Disposición horizontal */
+    align-items: center; /* Centrar verticalmente los elementos */
+    text-align: center;
+}
+
+.nav-links a {
+    font-size: 15px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-links li {
+    padding: 10px;
+    position: relative; /* Necesario para posicionar el div de la línea */
+}
+
+.nav-links li::after {
+    content: ""; /* Necesario para mostrar el div */
+    display: block; /* Cambiar a bloque */
+    width: 50%; /* Ancho de la línea divisoria */
+    height: 1px; /* Altura de la línea divisoria */
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.nav-links li a:hover {
+    color: #fff;
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-toggle .bar {
+    height: 4px; /* Cambié la altura para que sea más visible */
+    width: 25px; /* Ancho de las barras */
+    background-color: #000; /* Color de las barras */
+    margin: 4px 0; /* Espacio entre las barras */
+    transition: 0.3s; /* Transición suave */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        justify-content: end;
+        margin: 10%;
+        text-align: end;
+        flex-direction: column;
+    }
+
+    .text-container{
+        margin-bottom: 15%;
+    }
+    .menu-toggle {
+        display: none; /* Ocultar por defecto */
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .image-container img {
+        max-width: 100%;
+        height: 300px;
+        width: 300px;
+        border-top-left-radius: 300px;
+        border-bottom-left-radius: 300px;
+        border-top-right-radius: 300px;
+        border-bottom-right-radius: 300px;
+        object-fit: cover;
+       
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: flex; 
+        flex-direction: column; /* Mostrar el menú hamburguesa en dispositivos pequeños */
+    }
+
+    .nav-links {
+        display: none; /* Ocultar el menú en dispositivos pequeños */
+        flex-direction: column;
+        position: absolute; /* Posición absoluta para superponer */
+        top: 100px; /* Ajustar la posición */
+        right: 0; /* Alinear a la derecha */
+        width: 100%; /* Ancho completo */
+        padding: 10px 0; /* Espaciado interno */
+        z-index: 1000; /* Asegurar que se superponga sobre otros elementos */
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar el menú cuando se activa */
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto 0; /* Margen superior y centrado */
+        text-align: center;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid #e2f1f8;
+    }
+}
+
+/* Overlay */
+.overlay {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Posición fija para cubrir toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    z-index: 500; /* Asegurarte que esté por debajo del menú */
+}
+
+/* Mostrar la capa de fondo cuando el menú está activo */
+.nav-links.active + .overlay {
+    display: block; /* Mostrar la capa de fondo cuando el menú se activa */
+}
+
+/* Botón de cerrar menú */
+.close-menu {
+    position: absolute;
+    top: 20px; /* Ajustar según tu diseño */
+    right: 20px; /* Ajustar según tu diseño */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    font-size: 20px; /* Tamaño del texto */
+    cursor: pointer; /* Cursor de puntero */
+    z-index: 200; /* Asegurarte que esté por encima del overlay */
+}
+
+
+@media (max-width: 550px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .text-container {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-container img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .card .card_landing img {
+        height: auto;
+    }
+
+    .header {
+        padding: 5px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        padding: 5px;
+    }
+
+    .btn, .btn2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .overlay {
+        
+        position: fixed;
+        width: 100%;
+        height: 100%;
+   
+    }
+}
