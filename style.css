@@ -377,12 +377,12 @@ body {
 
     .card {
         width: 80%;
-        height: auto;
+        height: 400px;
         margin: 10px 0;
     }
 
     .card .card_landing img {
-        height: auto;
+        height: 400px;
     }
 
     .header {
@@ -434,3 +434,22 @@ body {
    
     }
 }
+/*Redes*/
+
+.redes{
+
+    cursor: pointer;
+
+    height: 30px;
+    min-height: 16px;
+    width: 35px;
+    margin: 13px ;
+}
+
+.title{
+    display: flex;
+    
+    flex-direction: column;
+    
+}
+
