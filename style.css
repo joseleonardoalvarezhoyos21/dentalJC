@@ -277,6 +277,7 @@ body {
         object-fit: cover;
        
     }
+    
 
     .cards-container {
         flex-direction: column;
@@ -453,3 +454,89 @@ body {
     
 }
 
+.Contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.image-container2 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.image-container2 img {
+    height: 500px;
+    width: 600px;
+    margin-left: -20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    object-fit: cover;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px; /* Ajusta el espacio según sea necesario */
+}
+
+.descriptionContacto {
+    margin-bottom: 15px; /* Añade espacio entre el texto y los iconos */
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family:Sans-serif;
+    
+}
+
+
+.redes3 {
+    display: flex;
+    gap: 10px; /* Espacio entre los iconos */
+}
+
+.redes2 {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+}
+
+.redes2:hover {
+    transform: scale(1.1);
+}
+
+
+/*whasap*/
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+    transform: scale(1.1);
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}

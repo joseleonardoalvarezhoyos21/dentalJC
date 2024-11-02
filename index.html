@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,6 +7,7 @@
     <title>Productos.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -14,7 +15,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
-
+<script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 <body>
 
     <header class="header">
@@ -27,13 +28,13 @@
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-        
+
         <nav class="nav-links" id="nav-links">
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Servicios</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a class="btn" href="/index2.html">Contact</a></li>
+                <li><a href="#QuieneSomos">Sobre Nosotros</a></li>
+                <li><a class="btn" href="#Contact">Contact</a></li>
             </ul>
         </nav>
 
@@ -43,7 +44,7 @@
     <section class="container">
         <div class="text-container">
             <h2>Bienvenido.</h2>
-            <a class="btn2" href="#">Contáctanos</a>
+            <a class="btn2" href="#Contact">Contáctanos</a>
         </div>
         <div class="image-container">
             <img src="./img/pexels-polina-zimmerman-4687343.jpg" alt="Imagen ovalada">
@@ -51,7 +52,7 @@
     </section>
 
     <!-- Un solo contenedor para todas las tarjetas -->
-    <div class="cards-container">
+    <div class="cards-container" id="QuieneSomos">
         <div class="card">
             <div class="card_landing">
                 <img src="./img/odontologa2.jpg" alt="Ceviche" />
@@ -107,28 +108,59 @@
                         </div>
                     </div>
                 </div>
-                <div class="content">
+                <div class="QuieneSomos">
                     <p class="title">Redes Sociales:</p>
                     <div>
-                        <a href=""><img class="redes"src="https://img.icons8.com/?size=100&id=DpOQ6G5p47f0&format=png&color=000000" alt="Instagram"></a>
-                        <a href=""></a><img class= "redes" src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=000000" alt="X"></a>
-                        <a href="https://www.facebook.com/johanita.diaz.921"><img class= "redes" src="https://img.icons8.com/?size=100&id=118468&format=png&color=000000" alt="Facebook"></a>
-                        <a href="tel:+573227679915"><img class= "redes" src="https://img.icons8.com/?size=100&id=9660&format=png&color=000000" alt="Llamar"></a>
+                        <a href=""><img class="redes"
+                                src="https://img.icons8.com/?size=100&id=DpOQ6G5p47f0&format=png&color=000000"
+                                alt="Instagram"></a>
+                        <a href=""></a><img class="redes"
+                            src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=000000" alt="X"></a>
+                        <a href="https://www.facebook.com/johanita.diaz.921"><img class="redes"
+                                src="https://img.icons8.com/?size=100&id=118468&format=png&color=000000"
+                                alt="Facebook"></a>
+                        <a href="tel:+573227679915"><img class="redes"
+                                src="https://img.icons8.com/?size=100&id=9660&format=png&color=000000" alt="Llamar"></a>
                     </div>
                     <ul class="list">
-                        
+
                         <li>1 kilogramo de pescado</li>
-                     
+
                     </ul>
                 </div>
                 <div class="action">
                     <a href="#" class="btn">Consultar.</a>
                 </div>
 
-        
+            </div>
+        </div>
     </div>
+
+    <section class="Contact" id="Contact">
+        <div class="image-container2">
+            <img src="./img/imagenContactanos.jpeg" alt="Imagen ovalada">
+        </div>
+        <div class="info-container">
+            <p class="descriptionContacto">Contáctanos en cualquiera de nuestras redes sociales.</p>
+            <div class="redes3">
+                <a href=""><img class="redes2"
+                        src="https://img.icons8.com/?size=100&id=DpOQ6G5p47f0&format=png&color=000000"
+                        alt="Instagram"></a>
+                <a href=""><img class="redes2"
+                        src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=000000" alt="X"></a>
+                <a href="https://www.facebook.com/johanita.diaz.921"><img class="redes2"
+                        src="https://img.icons8.com/?size=100&id=118468&format=png&color=000000"
+                        alt="Facebook"></a>
+                <a href="tel:+573227679915"><img class="redes2"
+                        src="https://img.icons8.com/?size=100&id=9660&format=png&color=000000" alt="Llamar"></a>
+            </div>
+        </div>
+    </section>
     
-    
+
+    <a href="https://api.whatsapp.com/send?phone=573227679915&text=Hola,%20estoy%20interesado%20en%20más%20información" class="btn-wsp" target="_blank">
+        <i class="fa fa-whatsapp icono"></i>
+    </a>
     
 
     <script src="index.js"></script> <!-- Vinculando el archivo JavaScript -->
